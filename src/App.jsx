@@ -23,7 +23,7 @@ function App() {
   const handleSubmit = async (e) => {
     setLoading(true);
     console.log(fancyRef.current.value)
-    let prompt = 'Please give me the name for a song to play at a dining experience based on the following description: You are eating ' + baseRef.current.value + '. The mood is ' + String(fancyRef.current.value) + '% Fancy, ' + String(romanticRef.current.value) + '% Romantic, ' + Stirng(partyRef.current.value) + '% Party, ' + String(sadRef.current.value) + '% Sad. Please only return the name of the song and nothing else.'
+    let prompt = 'Please give me the name for a song to play at a dining experience based on the following description: You are eating ' + baseRef.current.value + '. The mood is ' + String(fancyRef.current.value) + '% Fancy, ' + String(romanticRef.current.value) + '% Romantic, ' + String(partyRef.current.value) + '% Party, ' + String(sadRef.current.value) + '% Sad. Please only return the name of the song and nothing else.'
     try {
       console.log(import.meta.VITE_OPENAI_API_KEY)
       const result = await openai.createCompletion({
@@ -57,7 +57,7 @@ function App() {
 
       <div className='flex-container'>
         <div className='flex-item'>
-          <h3>Fancy Percentage%</h3>
+          <h3>Fancy Percentage</h3>
         <input type="range" ref={fancyRef} min="0" max="100" />
         </div>
 
